@@ -3,6 +3,11 @@
 	<title></title>
 </head>
 <style type="text/css">
+
+	*
+	{
+		font-family: sans-serif;
+	}
 	.note
 	{
 		display: inline-block;
@@ -75,13 +80,6 @@
 <body>
 	<h3>Here are all of the notes!</h3>
 	<div id='notes'>
-		<!-- <div class='note'>
-			<a class='delete' href="/notes/delete/333">x</a>
-			<form action='/notes/update/333' class='update'>
-				<textarea>This is where my description will go!</textarea>
-				<input type='submit' value='edit'>
-			</form>
-		</div> -->
 		<?php 
 			foreach ($notes as $note) 
 			{
