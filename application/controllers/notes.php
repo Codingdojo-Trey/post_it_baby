@@ -12,8 +12,9 @@ class Notes extends CI_Controller {
 	public function create()
 	{
 		$this->load->model('note');
-		$this->note->create_note($this->input->post());
-		echo json_encode($this->input->post());
+		$id = $this->note->create_note($this->input->post());
+		$data = array('id' => $id, 'message' => $this->input->post('message'), 'title' => $this->input->post('title'));
+		echo json_encode($data);
 	}
 
 	public function delete($id)
